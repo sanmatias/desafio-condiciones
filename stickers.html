@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style_stickers.css">
+</head>
+<body>
+    <div style="height: 100px;text-align: center;display: grid;grid-template-columns: 1fr 1fr 1fr;position: absolute;top:0px;left: 0px">
+<a href="index.html"> <button style="height: 70px;width: 150px;font-size: large;background-color:springgreen;">Cambio de color</button> </a>
+<a href="stickers.html"><button style="height: 70px;width: 150px;font-size: large;background-color:springgreen;">Stickers</button> </a>
+<a href="password.html"> <button style="height: 70px;width: 150px;font-size: large;background-color:springgreen;">Password</button> </a>
+
+    </div>
+
+    <h1>Puedes llevar hasta 10 stickers en total</h1>
+
+    <div class="grilla">
+        <div >
+            <img src="assets/img/moneda_peso.png" alt="" class="imagen">
+            <input id="moneda1" type="text">
+        </div>
+        <div >
+            <img src="assets/img/moneda_5.png" alt="" class="imagen">
+            <input id="moneda2" type="text">
+        </div>
+        <div >
+            <img src="assets/img/moneda_100.png" alt="" class="imagen">
+            <input id="moneda3" type="text">
+        </div>
+    </div>
+
+    <div class="espacio_arriba">
+    <p id="respuesta"></p>
+    <button id="verificar" 
+    onclick="
+respuesta = document.getElementById('respuesta')
+    moneda1 = document.getElementById('moneda1')
+    moneda2 = document.getElementById('moneda2')
+    moneda3 = document.getElementById('moneda3')
+    suma = Number(moneda1.value)+Number(moneda2.value)+Number(moneda3.value)
+    if(suma>10){
+mensaje= 'Llevas demasiados stickers'
+respuesta.innerHTML = mensaje
+    }else if(suma <=10){
+        respuesta.innerHTML = 'Llevas: '+moneda1.value+' del sticker moneda 1 peso, '+moneda2.value+' del sticker modena de 5 pesos y '+moneda3.value+' del sticker moneda de 100 pesos'
+    }else{
+        respuesta.innerHTML = 'Ingrese numeros por favor'
+    }
+
+    "
+    >Verificar</button>
+</div>
+</body>
+</html>

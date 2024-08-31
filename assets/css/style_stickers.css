@@ -1,0 +1,18 @@
+.grilla{
+    grid-template-columns:1fr 1fr 1fr ;
+    display: grid;
+}
+.imagen{
+    height: 300px;
+    width: 300px;
+    
+}
+
+h1{
+    text-align: end;
+}
+
+.espacio_arriba{
+padding-top: 50px;
+text-align: center;
+}
